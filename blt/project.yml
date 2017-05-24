@@ -1,7 +1,7 @@
 project:
-  machine_name: MY_PROJECT
+  machine_name: cdo
   prefix: BLT
-  human_name: 'BLTed 8'
+  human_name: 'change.drupal.org'
   profile:
     name: lightning
   local:
