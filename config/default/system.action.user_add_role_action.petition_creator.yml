@@ -1,0 +1,14 @@
+uuid: 610755a3-a851-4525-a2a9-36e01714696d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.petition_creator
+  module:
+    - user
+id: user_add_role_action.petition_creator
+label: 'Add the Petition creator role to the selected users'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: petition_creator

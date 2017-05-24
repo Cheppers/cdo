@@ -1,0 +1,26 @@
+uuid: 75c8c6cc-5df1-470c-9464-74ccc1f60c7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.petition.body
+    - node.type.petition
+  module:
+    - text
+    - user
+id: node.petition.default
+targetEntityType: node
+bundle: petition
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

@@ -1,0 +1,28 @@
+uuid: 9cf40829-adbb-4ddc-963e-1df6094ca5bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.petition.body
+    - node.type.petition
+  module:
+    - text
+    - user
+id: node.petition.teaser
+targetEntityType: node
+bundle: petition
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden: {  }

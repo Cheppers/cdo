@@ -1,0 +1,18 @@
+uuid: f25e6160-82db-4254-be81-b1341991cf09
+langcode: en
+status: true
+dependencies: {  }
+id: petition_reviewer
+label: 'Petition reviewer'
+weight: 8
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'delete any petition content'
+  - 'edit any petition content'
+  - 'use draft_published transition'
+  - 'use needs_review_draft transition'
+  - 'use needs_review_published transition'
+  - 'use published_archived transition'
+  - 'use published_published transition'
+  - 'view moderation states'

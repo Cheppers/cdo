@@ -1,0 +1,14 @@
+uuid: 65c29974-f29b-47a8-ada0-92d532ad524c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.petition_reviewer
+  module:
+    - user
+id: user_remove_role_action.petition_reviewer
+label: 'Remove the Petition reviewer role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: petition_reviewer

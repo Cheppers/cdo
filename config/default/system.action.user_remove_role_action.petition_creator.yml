@@ -1,0 +1,14 @@
+uuid: d32a4297-1f96-47c7-8143-ba29d249889a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.petition_creator
+  module:
+    - user
+id: user_remove_role_action.petition_creator
+label: 'Remove the Petition creator role from the selected users'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: petition_creator

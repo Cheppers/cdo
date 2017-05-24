@@ -1,0 +1,22 @@
+uuid: fbe4f1bc-8d9a-4971-87b0-793f3662698e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.petition
+  module:
+    - text
+id: node.petition.body
+field_name: body
+entity_type: node
+bundle: petition
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
