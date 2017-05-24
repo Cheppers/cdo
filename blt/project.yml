@@ -9,8 +9,7 @@ project:
     hostname: 'local.${project.machine_name}.com'
 git:
   default_branch: master
-  remotes:
-    cloud: 'cdo@svn-6609.devcloud.hosting.acquia.com:cdo.git'
+  remotes: {}
 drush:
   aliases:
     remote: '${project.machine_name}.test'
