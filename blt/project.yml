@@ -1,6 +1,6 @@
 project:
   machine_name: cdo
-  prefix: BLT
+  prefix: CDO
   human_name: 'change.drupal.org'
   profile:
     name: lightning
