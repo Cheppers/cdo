@@ -1,0 +1,10 @@
+use_ajax: false
+_core:
+  default_config_hash: 1kY_ibjpKYrLZZWifcrYumCcksc1NQ5dElTWUvaUGfg
+enabled_types_bundles:
+  node:
+    - petition
+widget_type: thumbs_up
+bot_minute_threshold: '0'
+bot_hour_threshold: '0'
+botscout_key: ''

@@ -1,0 +1,10 @@
+uuid: 073b2348-84c3-40fa-8130-454b0246b2c0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: rwkIzIYL0Gn5SrxF7eXwJMl-fZ5P7WiYYWV5TsIpdko
+id: up
+label: 'Like/Up/Yes vote'
+value_type: points
+description: 'A positive vote.'
