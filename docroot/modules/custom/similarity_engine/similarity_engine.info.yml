@@ -1,0 +1,5 @@
+name: 'Similarity Engine'
+core: 8.x
+type: module
+description: 'Interacts with the Similarity Engine API.'
+version: '8.x-1.0-dev'

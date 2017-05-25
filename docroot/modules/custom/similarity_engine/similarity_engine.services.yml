@@ -1,0 +1,4 @@
+services:
+  similarity_engine.api_connector:
+    class: '\Drupal\similarity_engine\ApiConnector'
+    arguments: {}
