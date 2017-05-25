@@ -7,8 +7,15 @@ dependencies:
     - field.field.node.petition.body
     - node.type.petition
   module:
+    - panelizer
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.petition.teaser
 targetEntityType: node
 bundle: petition
@@ -17,12 +24,14 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 0
     settings:
-      trim_length: 600
+      trim_length: 100
     third_party_settings: {  }
     region: content
   links:
-    weight: 100
+    weight: 1
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

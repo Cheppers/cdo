@@ -1,4 +1,5 @@
 module:
+  acquia_connector: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -11,7 +12,6 @@ module:
   ctools_block: 0
   datetime: 0
   dblog: 0
-  devel: 0
   diff: 0
   editor: 0
   embed: 0
@@ -70,6 +70,7 @@ module:
   search_api: 0
   search_api_db: 0
   seckit: 0
+  shield: 0
   shortcut: 0
   similarity_engine: 0
   system: 0
@@ -82,7 +83,7 @@ module:
   video_embed_media: 0
   views_infinite_scroll: 0
   views_ui: 0
-  votingapi: 0
+  voting_api: 0
   workbench_moderation: 0
   menu_link_content: 1
   views: 10

@@ -7,7 +7,7 @@ dependencies:
     - user
 third_party_settings:
   panelizer:
-    enable: true
+    enable: false
     custom: false
     allow: false
     default: default
