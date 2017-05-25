@@ -33,7 +33,7 @@ class ApiConnector {
   public function __construct() {
     $this->httpClient = \Drupal::httpClient();
     $this->endpoint = 'http://ec2-52-207-237-91.compute-1.amazonaws.com:5001';
-    $this->batchId = 'my_test_batch';
+    $this->batchId = 'cdo';
   }
 
   /**
