@@ -73,13 +73,31 @@ class ApiConnector {
    * @return int
    *   HTTP Response code.
    */
-  protected function putDocument($text, $uuid) {
+  public function putDocument($text, $uuid) {
     $client = $this->httpClient;
     $uri = $this->getUri('documents', $uuid);
     $options = [
-      'text' => $text,
+      'json' => [
+        'text' => $text,
+      ],
     ];
     $request = $client->put($uri, $options);
+    return $request->getStatusCode();
+  }
+
+  /**
+   * Deletes a document from the Similarity Engine.
+   *
+   * @param string $uuid
+   *   The uuid used when creating the document.
+   *
+   * @return int
+   *   HTTP Response code.
+   */
+  public function deleteDocument($uuid) {
+    $client = $this->httpClient;
+    $uri = $this->getUri('documents', $uuid);
+    $request = $client->delete($uri);
     return $request->getStatusCode();
   }
 
