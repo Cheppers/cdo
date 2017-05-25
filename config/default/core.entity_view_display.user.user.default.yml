@@ -1,0 +1,50 @@
+uuid: fd9b50b6-bb7d-472e-9f84-2b030f80e25c
+langcode: en
+status: true
+dependencies:
+  module:
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          25e73ce6-5c47-4e9f-a759-7f219c5e9319:
+            id: 'views_block:my_petitions-block_1'
+            label: ''
+            provider: views
+            label_display: visible
+            views_label: ''
+            items_per_page: none
+            region: content
+            weight: 0
+            uuid: 25e73ce6-5c47-4e9f-a759-7f219c5e9319
+            context_mapping: {  }
+        id: panels_variant
+        label: Default
+        uuid: 8b538011-534f-4af4-b5a1-0e0de0c75dc9
+        weight: 0
+        layout: layout_onecol
+        layout_settings: {  }
+        page_title: '[user:name]'
+        storage_type: panelizer_default
+        storage_id: 'user:user:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  member_for:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
