@@ -6,15 +6,8 @@ dependencies:
     - field.field.node.petition.body
     - node.type.petition
   module:
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.petition.default
 targetEntityType: node
 bundle: petition
@@ -30,11 +23,4 @@ content:
   links:
     weight: 100
     region: content
-    settings: {  }
-    third_party_settings: {  }
-  rate_vote_widget:
-    weight: 100
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden: {  }

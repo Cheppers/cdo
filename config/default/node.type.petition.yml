@@ -24,4 +24,4 @@ description: 'An issue that the community can vote on and to which the DA can re
 help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false
