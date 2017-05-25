@@ -2,8 +2,6 @@
 
 namespace Drupal\similarity_engine;
 
-use Drupal\Core\Entity\EntityRepository;
-
 /**
  * Class ApiConnector interacts with the Similarity Engine.
  */
@@ -35,7 +33,7 @@ class ApiConnector {
   public function __construct() {
     $this->httpClient = \Drupal::httpClient();
     $this->endpoint = 'http://ec2-52-207-237-91.compute-1.amazonaws.com:5001';
-    $this->batchId = '1234';
+    $this->batchId = 'my_test_batch';
   }
 
   /**
@@ -47,21 +45,21 @@ class ApiConnector {
    * @return \Drupal\node\Entity\Node[]
    *   Array of node entities.
    */
-  protected function getSimilar($text) {
+  public function getSimilar($text) {
     $client = $this->httpClient;
     $options = [
-      'text' => $text,
+      'json' => [
+        'text' => $text,
+      ],
     ];
     $uri = $this->getUri('similar');
     $request = $client->post($uri, $options);
-    $matches = $request->getBody();
-    $entity_repository = new EntityRepository();
+    $matches = \GuzzleHttp\json_decode($request->getBody());
     $nodes = [];
-    foreach ($matches as $match) {
-      $nodes[$match] = $entity_repository->loadEntityByUuid('node', $match);
+    foreach ($matches->matches as $match) {
+      $nodes[$match->doc_id] = \Drupal::entityManager()->loadEntityByUuid('node', $match->doc_id);
     }
     return $nodes;
-
   }
 
   /**
@@ -97,7 +95,11 @@ class ApiConnector {
    *   URI for the service.
    */
   protected function getUri($service, $path = NULL) {
-    return implode('/', [$this->endpoint, $service, $this->batchId, $path]);
+    $uri = implode('/', [$this->endpoint, $service, $this->batchId]);
+    if ($path) {
+      $uri = $uri . '/' . $path;
+    }
+    return $uri;
   }
 
 }
