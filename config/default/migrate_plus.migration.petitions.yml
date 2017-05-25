@@ -1,0 +1,39 @@
+uuid: 422a5348-b36b-43af-b3f0-54f1d3c85dd4
+langcode: en
+status: true
+dependencies: {  }
+id: petitions
+migration_tags: null
+migration_group: null
+label: 'CDO petitions'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: 'https://s3.amazonaws.com/uploads.hipchat.com/18075/3138448/GCWgUWjDv4BJ9NE/petitions_created_after_August_29.json'
+  item_selector: results/
+  fields:
+    -
+      name: id
+      selector: /id
+    -
+      name: title
+      selector: /title
+    -
+      name: body
+      selector: /body
+  ids:
+    id:
+      type: integer
+process:
+  title: title
+  body/value: body
+  body/format:
+    plugin: default_value
+    default_value: rich_text
+  type:
+    plugin: default_value
+    default_value: petition
+destination:
+  plugin: 'entity:node'
+migration_dependencies: {  }
