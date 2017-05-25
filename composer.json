@@ -7,12 +7,19 @@
     "require": {
         "acquia/blt": "^8.3",
         "drupal/migrate_plus": "^4.0-beta1",
-        "drupal/migrate_tools": "^4.0-beta1"
+        "drupal/migrate_tools": "^4.0-beta1",
+        "drupal/registration_role": "^1.0@alpha"
     },
     "require-dev": {
     },
     "extra": {
         "enable-patching": true,
+        "patches": {
+            "drupal/registration_role": {
+                "2832326 - Adding Role whenever user account is edited or account updated":
+                "https://www.drupal.org/files/issues/registration_role-adding_role_every_account_edit-2832326-7-8.x-1.0-alpha1.patch"
+            }
+        },
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
