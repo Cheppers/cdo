@@ -91,6 +91,8 @@ class AddPetition extends FormBase {
     else {
       $node = $form_state->get('node');
       $node->save();
+      \Drupal::service('similarity_engine.api_connector')
+        ->putDocument($form_state->getValue('title') . $form_state->getValue('body'), $node->uuid());
       drupal_set_message($this->t('Here is your petition, start gaining support for it.'));
       $form_state->setRedirect('entity.node.canonical',['node' => $node->id()]);
     }
