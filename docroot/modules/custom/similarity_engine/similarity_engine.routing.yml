@@ -1,0 +1,7 @@
+similarity_engine.add_petition:
+  path: '/add-petition'
+  defaults:
+    _form: '\Drupal\similarity_engine\Form\AddPetition'
+    _title: 'Add petition'
+  requirements:
+    _permission: 'access content'
