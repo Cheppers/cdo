@@ -5,3 +5,10 @@ similarity_engine.add_petition:
     _title: 'Add petition'
   requirements:
     _permission: 'access content'
+similarity_engine_sandbox:
+  path: 'similarity-engine/sandbox'
+  defaults:
+    _form: '\Drupal\similarity_engine\Form\SimilaritySandboxForm'
+    _title: 'Similarity engine sandbox'
+  requirements:
+    _permission: 'access content'

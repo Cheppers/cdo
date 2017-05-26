@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * @file
+ * Similarity Engine module interacts with the SE API.
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\similarity_engine\ApiConnector;
+
+/**
+ * Implements hook_entity_insert().
+ */
+function similarity_engine_entity_insert(EntityInterface $entity) {
+  if ($entity->getEntityTypeId() == 'node') {
+    if ($entity->bundle() == 'petition') {
+      $title = $entity->label();
+      $body = strip_tags($entity->body->value);
+      $text = implode(' ', [$title, $body]);
+      $uuid = $entity->uuid();
+
+      // Add the petition to the Similarity Engine.
+      $similarity_engine = new ApiConnector();
+      $similarity_engine->putDocument($text, $uuid);
+    }
+  }
+}
