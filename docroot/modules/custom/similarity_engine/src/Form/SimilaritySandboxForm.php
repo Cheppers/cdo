@@ -58,7 +58,6 @@ class SimilaritySandboxForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
     $form_state->setRebuild();
-    drupal_set_message('Submitted');
   }
 
   /**
